@@ -105,7 +105,12 @@ class App extends Component {
         return alert("Deses hacerlo en menos de 10 intentos para lograrlo");
       }
       setTimeout(() => {
-        this.setState({ juegoCompletado: false, registrado: false });
+        this.setState({
+          juegoCompletado: false,
+          registrado: false,
+          nombre: "",
+          correo: "",
+        });
       }, 11000);
     }
   }
