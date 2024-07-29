@@ -102,9 +102,19 @@ class App extends Component {
     if (baraja.filter((carta) => !carta.fueAdivinada).length === 0) {
       this.setState({ juegoCompletado: true });
       if (this.state.numeroDeIntentos >= 10) {
+        setTimeout(() => {
+          this.setState(getEstadoInicial());
+          this.setState({
+            juegoCompletado: false,
+            registrado: false,
+            nombre: "",
+            correo: "",
+          });
+        }, 60000);
         return alert("Deses hacerlo en menos de 10 intentos para lograrlo");
       }
       setTimeout(() => {
+        this.setState(getEstadoInicial());
         this.setState({
           juegoCompletado: false,
           registrado: false,
