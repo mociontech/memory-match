@@ -27,6 +27,7 @@ class App extends Component {
       registrado: false,
       zoneExp: zone,
     };
+    this.timeoutId = null;
   }
 
   handleChange = (event) => {
@@ -99,34 +100,37 @@ class App extends Component {
   }
 
   verificarSiHayGanador(baraja) {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+    }
+    this.timeoutId = setTimeout(() => {
+      this.volverAInicio();
+    }, 120000);
+
     if (baraja.filter((carta) => !carta.fueAdivinada).length === 0) {
+      clearTimeout(this.timeoutId);
       this.setState({ juegoCompletado: true });
       if (this.state.numeroDeIntentos >= 10) {
-        setTimeout(() => {
-          this.setState(getEstadoInicial());
-          this.setState({
-            juegoCompletado: false,
-            registrado: false,
-            nombre: "",
-            correo: "",
-          });
-        }, 60000);
         return alert("Deses hacerlo en menos de 10 intentos para lograrlo");
       }
       setTimeout(() => {
-        this.setState(getEstadoInicial());
-        this.setState({
-          juegoCompletado: false,
-          registrado: false,
-          nombre: "",
-          correo: "",
-        });
+        this.volverAInicio();
       }, 11000);
     }
   }
 
   resetearPartida() {
     this.setState(getEstadoInicial());
+  }
+
+  volverAInicio() {
+    this.setState(getEstadoInicial());
+    this.setState({
+      juegoCompletado: false,
+      registrado: false,
+      nombre: "",
+      correo: "",
+    });
   }
 
   render() {
