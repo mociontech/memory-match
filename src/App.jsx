@@ -117,11 +117,13 @@ class App extends Component {
         <div className="top">
           <div className="registro">
             <img src="marco1.png" alt="" className="imagentop"></img>
-            <h1 className="text1 montserrat">¡Pon a prueba tu memoria! </h1>
-            <h2 className="text2 montserrat">
-              Encuentra todas las parejas en el menor número de intentos posible
-              y demuestra tu habilidad. ¿Listo para el desafío?
-            </h2>
+            <div className="title-container">
+              <h1 className="text1 montserrat">¡Pon a prueba tu memoria! </h1>
+              <h2 className="text2 montserrat">
+                Encuentra todas las parejas en el menor número de intentos
+                posible y demuestra tu habilidad. ¿Listo para el desafío?
+              </h2>
+            </div>
             <link
               href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
               rel="stylesheet"
@@ -198,7 +200,7 @@ class App extends Component {
           parejaSeleccionada={this.state.parejaSeleccionada}
           seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
         />
-        <img src="/humano.svg" alt="" className="humano-logo"/>
+        <img src="/humano.svg" alt="" className="humano-logo" />
       </div>
     );
   }
