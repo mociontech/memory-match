@@ -1,8 +1,8 @@
-import { Component } from 'react';
-import construirBaraja from './utils/construirBaraja';
-import Tablero from './components/Tablero';
-import Header from './components/Header';
-import axios from 'axios';
+import { Component } from "react";
+import construirBaraja from "./utils/construirBaraja";
+import Tablero from "./components/Tablero";
+import Header from "./components/Header";
+import axios from "axios";
 
 const getEstadoInicial = () => {
   const baraja = construirBaraja();
@@ -13,19 +13,19 @@ const getEstadoInicial = () => {
     numeroDeIntentos: 0,
     juegoCompletado: false, // Nuevo estado para el juego completado
   };
-}
+};
 
 const sp = new URLSearchParams(window.location.search);
-const zone = sp.get('zone')?.toLowerCase() || '';
+const zone = sp.get("zone")?.toLowerCase() || "";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       ...getEstadoInicial(),
-      nombre: '',
-      correo: '',
+      nombre: "",
+      correo: "",
       registrado: false,
-      zoneExp: zone
+      zoneExp: zone,
     };
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
     if (this.state.nombre && this.state.correo) {
       this.setState({ registrado: true });
       const newUniqueId = Math.random().toString(36).substring(7);
-      const newHashId = 'RD-Memory-Match-' + newUniqueId;
+      const newHashId = "RD-Memory-Match-" + newUniqueId;
       const url = `https://mocionws.info/dbController.php?method=newRecordExclude&table=leads&name=${this.state.nombre}&email=${this.state.correo}&uniqueId=${newHashId}&experience=${this.state.zoneExp}`;
       await axios.get(url);
     } else {
@@ -57,7 +57,7 @@ class App extends Component {
 
     const parejaSeleccionada = [...this.state.parejaSeleccionada, carta];
     this.setState({
-      parejaSeleccionada
+      parejaSeleccionada,
     });
 
     if (parejaSeleccionada.length === 2) {
@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   compararPareja(parejaSeleccionada) {
-    this.setState({estaComparando: true});
+    this.setState({ estaComparando: true });
 
     setTimeout(() => {
       const [primeraCarta, segundaCarta] = parejaSeleccionada;
@@ -78,7 +78,7 @@ class App extends Component {
             return carta;
           }
 
-          return {...carta, fueAdivinada: true};
+          return { ...carta, fueAdivinada: true };
         });
       }
 
@@ -87,9 +87,9 @@ class App extends Component {
         parejaSeleccionada: [],
         baraja,
         estaComparando: false,
-        numeroDeIntentos: this.state.numeroDeIntentos + 1
-      })
-    }, 1000)
+        numeroDeIntentos: this.state.numeroDeIntentos + 1,
+      });
+    }, 1000);
   }
 
   esPareja(carta1, carta2) {
@@ -99,52 +99,57 @@ class App extends Component {
   }
 
   verificarSiHayGanador(baraja) {
-    if (
-      baraja.filter((carta) => !carta.fueAdivinada).length === 0
-    ) {
+    if (baraja.filter((carta) => !carta.fueAdivinada).length === 0) {
       this.setState({ juegoCompletado: true });
-      if (this.state.numeroDeIntentos >= 10){
-        alert("Deses hacerlo en menos de 10 intentos para lograrlo")
+      if (this.state.numeroDeIntentos >= 10) {
+        alert("Deses hacerlo en menos de 10 intentos para lograrlo");
       }
     }
   }
 
   resetearPartida() {
-    this.setState(
-      getEstadoInicial()
-    );
+    this.setState(getEstadoInicial());
   }
 
   render() {
     if (!this.state.registrado) {
       return (
-      <div className="top" >
-        <div className="registro">
-          <img src='marco1.png'alt='' className="imagentop"></img>
-          <h1 className='text1'>¡Pon a prueba tu memoria! </h1>
-          <h2 className='text2'>Encuentra todas las parejas en el menor número de intentos posible y demuestra tu habilidad.
-          ¿Listo para el desafío?</h2>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-          <h1 className="registratetitulo">Registrate</h1>
-          <form>
-            <input
-              type="text"
-              name="nombre"
-              placeholder="Nombre"
-              value={this.state.nombre}
-              onChange={this.handleChange}
+        <div className="top">
+          <div className="registro">
+            <img src="marco1.png" alt="" className="imagentop"></img>
+            <h1 className="text1 montserrat">¡Pon a prueba tu memoria! </h1>
+            <h2 className="text2 montserrat">
+              Encuentra todas las parejas en el menor número de intentos posible
+              y demuestra tu habilidad. ¿Listo para el desafío?
+            </h2>
+            <link
+              href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+              rel="stylesheet"
             />
-            <input
-              type="email"
-              name="correo"
-              placeholder="Correo"
-              value={this.state.correo}
-              onChange={this.handleChange}
-            />
-            <button type="button" onClick={this.handleRegistro}>¡Juega ahora!</button>
-          </form>
+            <div className="registro-space">
+              <h1 className="registratetitulo">Registrate</h1>
+              <form>
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre"
+                  value={this.state.nombre}
+                  onChange={this.handleChange}
+                />
+                <input
+                  type="email"
+                  name="correo"
+                  placeholder="Correo"
+                  value={this.state.correo}
+                  onChange={this.handleChange}
+                />
+                <button type="button" onClick={this.handleRegistro}>
+                  ¡Juega ahora!
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-      </div>
       );
     }
 
@@ -152,13 +157,26 @@ class App extends Component {
       return (
         <div className="felicitaciones">
           {this.state.numeroDeIntentos < 11 ? (
-            <div className='ganaste'>
-              <img src='Gracias.png'  alt='' className="imagenGracias"></img>
+            <div className="ganaste">
+              <img src="Gracias.png" alt="" className="imagenGracias"></img>
             </div>
           ) : (
             <div>
               {/* <p style={{color:'white'}}>Intentos: {this.state.numeroDeIntentos}</p> */}
-              <button onClick={() => this.resetearPartida()} style={{ display: 'block', margin: 'auto', width: '70%', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>Volver a Intentarlo</button>
+              <button
+                onClick={() => this.resetearPartida()}
+                style={{
+                  display: "block",
+                  margin: "auto",
+                  width: "70%",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                Volver a Intentarlo
+              </button>
             </div>
           )}
         </div>
@@ -166,17 +184,21 @@ class App extends Component {
     }
 
     return (
-      <div className="App" >
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+      <div className="App">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
         <Header
           numeroDeIntentos={this.state.numeroDeIntentos}
           resetearPartida={() => this.resetearPartida()}
         />
-        <Tablero 
+        <Tablero
           baraja={this.state.baraja}
           parejaSeleccionada={this.state.parejaSeleccionada}
           seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
         />
+        <img src="/humano.svg" alt="" className="humano-logo"/>
       </div>
     );
   }

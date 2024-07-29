@@ -1,4 +1,5 @@
-export default function Header({ resetearPartida, numeroDeIntentos }) {
+/* eslint-disable react/prop-types */
+export default function Header({ numeroDeIntentos }) {
   return (
     <header>
       {/* <div>
@@ -6,9 +7,9 @@ export default function Header({ resetearPartida, numeroDeIntentos }) {
           Reiniciar
         </button>
       </div> */}
-      <div className="titulo">
-        Intentos: {numeroDeIntentos}
-      </div>
+      <img src="/landscape-title.svg" alt="" className="title-svg" />
+      <div className="titulo">Intentos: {numeroDeIntentos}</div>
+      <img src="/humano.svg" alt="" className="humano-title" />
     </header>
   );
-};
+}

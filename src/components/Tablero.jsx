@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
-import Carta from './Carta';
+/* eslint-disable react/prop-types */
+import { useEffect } from "react";
+import Carta from "./Carta";
 
-export default function Tablero({ baraja, parejaSeleccionada, seleccionarCarta, setParejaSeleccionada }) {
+export default function Tablero({
+  baraja,
+  parejaSeleccionada,
+  seleccionarCarta,
+  setParejaSeleccionada,
+}) {
   useEffect(() => {
     if (parejaSeleccionada.length === 2) {
       const [carta1, carta2] = parejaSeleccionada;
