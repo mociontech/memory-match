@@ -113,9 +113,6 @@ class App extends Component {
       if (this.state.numeroDeIntentos >= 10) {
         return alert("Deses hacerlo en menos de 10 intentos para lograrlo");
       }
-      setTimeout(() => {
-        this.volverAInicio();
-      }, 11000);
     }
   }
 
@@ -186,9 +183,8 @@ class App extends Component {
             </div>
           ) : (
             <div>
-              {/* <p style={{color:'white'}}>Intentos: {this.state.numeroDeIntentos}</p> */}
               <button
-                onClick={() => this.resetearPartida()}
+                onClick={() => this.volverAInicio()}
                 style={{
                   display: "block",
                   margin: "auto",
@@ -199,7 +195,7 @@ class App extends Component {
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                Volver a Intentarlo
+                Siguiente
               </button>
             </div>
           )}
