@@ -37,6 +37,9 @@ Artes puntuales de cada una de las pantallas del flujo.
 # o dueño del repositorio
 git clone https://github.com/mociontech/memory-republica-iyc.git
 
+# Entre en el directorio
+cd memory-republica-iyc
+
 # Crear una nueva rama para el nuevo desarrollo
 git branch [nombre del proyecto]
 
