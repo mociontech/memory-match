@@ -52,3 +52,7 @@ npm install
 # Ejecutar en servidor local en el puerto 5173
 npm run dev
 ```
+
+# Resolución
+
+Esta experiencia fue desarrollada de manera responsive, tanto para retrato como landscape.
