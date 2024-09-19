@@ -2,6 +2,7 @@ import { Component } from "react";
 import construirBaraja from "./utils/construirBaraja";
 import Tablero from "./components/Tablero";
 import Header from "./components/Header";
+import { register } from "./utils/db";
 // import axios from "axios";
 
 const getEstadoInicial = () => {
@@ -38,10 +39,7 @@ class App extends Component {
   handleRegistro = async () => {
     if (this.state.nombre && this.state.correo) {
       this.setState({ registrado: true });
-      // const newUniqueId = Math.random().toString(36).substring(7);
-      // const newHashId = "RD-Memory-Match-" + newUniqueId;
-      // const url = `https://mocionws.info/dbController.php?method=newRecordExclude&table=leads&name=${this.state.nombre}&email=${this.state.correo}&uniqueId=${newHashId}&experience=${this.state.zoneExp}`;
-      // await axios.get(url);
+      await register(this.state.nombre, this.state.correo);
     } else {
       alert("Por favor, completa todos los campos");
     }
@@ -134,26 +132,14 @@ class App extends Component {
     if (!this.state.registrado) {
       return (
         <div className="top">
-          <div className="registro">
-            <img src="marco1.png" alt="" className="imagentop"></img>
-            <div className="title-container">
-              <h1 className="text1 montserrat">¡Pon a prueba tu memoria! </h1>
-              <h2 className="text2 montserrat">
-                Encuentra todas las parejas en el menor número de intentos
-                posible y demuestra tu habilidad. ¿Listo para el desafío?
-              </h2>
-            </div>
-            <link
-              href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-              rel="stylesheet"
-            />
+          <div className="registro inicio">
             <div className="registro-space">
-              <h1 className="registratetitulo">Registrate</h1>
               <form>
                 <input
                   type="text"
                   name="nombre"
                   placeholder="Nombre"
+                  className="mt"
                   value={this.state.nombre}
                   onChange={this.handleChange}
                 />
@@ -161,12 +147,15 @@ class App extends Component {
                   type="email"
                   name="correo"
                   placeholder="Correo"
+                  className="mt"
                   value={this.state.correo}
                   onChange={this.handleChange}
                 />
-                <button type="button" onClick={this.handleRegistro}>
-                  ¡Juega ahora!
-                </button>
+                <button
+                  type="button"
+                  className="boton"
+                  onClick={this.handleRegistro}
+                ></button>
               </form>
             </div>
           </div>
@@ -178,11 +167,21 @@ class App extends Component {
       return (
         <div className="felicitaciones">
           {this.state.numeroDeIntentos < 11 ? (
-            <div className="ganaste">
-              <img src="Gracias.png" alt="" className="imagenGracias"></img>
-            </div>
+            <div
+              className="ganaste"
+              onClick={() => {
+                window.location.href =
+                  "https://landing-ochre-gamma.vercel.app/";
+              }}
+            ></div>
           ) : (
-            <div>
+            <div
+              className="perdiste"
+              onClick={() => {
+                window.location.href =
+                  "https://landing-ochre-gamma.vercel.app/";
+              }}
+            >
               <button
                 onClick={() => this.volverAInicio()}
                 style={{
@@ -204,7 +203,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App memory">
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
@@ -218,7 +217,6 @@ class App extends Component {
           parejaSeleccionada={this.state.parejaSeleccionada}
           seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
         />
-        <img src="/humano.svg" alt="" className="humano-logo" />
       </div>
     );
   }

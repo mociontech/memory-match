@@ -23,6 +23,12 @@ body {
 .App {
   display: flex;
   flex-direction: column;
+  background-image: url("/bg-memory.webp");
+  background-size: cover; /* Ajusta la imagen para cubrir todo el body */
+  background-position: center; /* Centra la imagen en el body */
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
 }
 
 .humano-logo {
@@ -35,8 +41,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  margin: 100px auto;
   justify-content: center;
   gap: 5px;
 }
@@ -67,7 +72,7 @@ header {
 .portada {
   width: 20vw;
   height: 20vh;
-  background-color: #23b9df;
+  background-color: #f5006f;
   border-radius: 10px;
 }
 
@@ -106,8 +111,32 @@ body {
 }
 
 @media (orientation: portrait) {
-  body {
-    background-image: url("/bg-portrait.jpeg");
+  .memory {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/bg-memory.webp");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el body */
+    background-position: center; /* Centra la imagen en el body */
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  .perdiste {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/perdiste.webp");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el body */
+    background-position: center; /* Centra la imagen en el body */
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ganaste {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/agradecimiento.webp");
     background-size: cover; /* Ajusta la imagen para cubrir todo el body */
     background-position: center; /* Centra la imagen en el body */
     background-repeat: repeat;
@@ -136,15 +165,30 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 200px;
     height: 100vh;
     width: 100%;
+  }
+
+  .inicio {
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding: 0; /* Elimina el padding por defecto del body */
+    background-image: url("/login.webp");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el body */
+    background-position: center; /* Centra la imagen en el body */
+    background-repeat: repeat;
   }
 
   .registro-space {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1100px;
+    gap: 100px;
+  }
+
+  .mt {
+    margin-top: 10px;
   }
 
   .registratetitulo {
@@ -154,6 +198,12 @@ body {
     font-size: 2rem;
     font-style: normal;
     font-weight: 800;
+  }
+
+  .boton {
+    margin-top: 20px;
+    height: 300px;
+    background: transparent;
   }
 
   .imagentop {
@@ -229,16 +279,12 @@ body {
   }
 
   button {
-    background: #06adbf;
-    color: #fff;
     text-align: center;
     cursor: pointer;
     font-family: Montserrat;
     font-weight: 700;
-  }
-
-  button:hover {
-    background: #025a8a;
+    border: none;
+    box-shadow: none;
   }
 
   @media (max-width: 900px), (max-height: 1600px) {
@@ -281,7 +327,6 @@ body {
       font-size: 1.3rem;
     }
   }
-
 }
 
 @media (orientation: landscape) {
@@ -342,6 +387,14 @@ body {
 
   .App {
     flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/bg-memory.webp");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el body */
+    background-position: center; /* Centra la imagen en el body */
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
   }
 
   .registro {
