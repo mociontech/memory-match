@@ -2,7 +2,7 @@ import { Component } from "react";
 import construirBaraja from "./utils/construirBaraja";
 import Tablero from "./components/Tablero";
 import Header from "./components/Header";
-import axios from "axios";
+// import axios from "axios";
 
 const getEstadoInicial = () => {
   const baraja = construirBaraja();
@@ -38,10 +38,10 @@ class App extends Component {
   handleRegistro = async () => {
     if (this.state.nombre && this.state.correo) {
       this.setState({ registrado: true });
-      const newUniqueId = Math.random().toString(36).substring(7);
-      const newHashId = "RD-Memory-Match-" + newUniqueId;
-      const url = `https://mocionws.info/dbController.php?method=newRecordExclude&table=leads&name=${this.state.nombre}&email=${this.state.correo}&uniqueId=${newHashId}&experience=${this.state.zoneExp}`;
-      await axios.get(url);
+      // const newUniqueId = Math.random().toString(36).substring(7);
+      // const newHashId = "RD-Memory-Match-" + newUniqueId;
+      // const url = `https://mocionws.info/dbController.php?method=newRecordExclude&table=leads&name=${this.state.nombre}&email=${this.state.correo}&uniqueId=${newHashId}&experience=${this.state.zoneExp}`;
+      // await axios.get(url);
     } else {
       alert("Por favor, completa todos los campos");
     }
