@@ -170,16 +170,14 @@ class App extends Component {
             <div
               className="ganaste"
               onClick={() => {
-                window.location.href =
-                  "https://landing-ochre-gamma.vercel.app/";
+                window.location.href = "https://landing-the-band.netlify.app";
               }}
             ></div>
           ) : (
             <div
               className="perdiste"
               onClick={() => {
-                window.location.href =
-                  "https://landing-ochre-gamma.vercel.app/";
+                window.location.href = "https://landing-the-band.netlify.app";
               }}
             >
               <button
