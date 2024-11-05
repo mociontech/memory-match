@@ -28,11 +28,11 @@ const db = getFirestore(app);
 
 export async function register(name, correo) {
   try {
-    const isExisting = await getDoc(doc(db, "DBStandMocion", correo));
+    const isExisting = await getDoc(doc(db, "DBTheBand", correo));
     if (isExisting.data()) {
       return;
     } else {
-      await setDoc(doc(db, "DBStandMocion", correo), {
+      await setDoc(doc(db, "DBTheBand", correo), {
         nombre: name,
         correo: correo,
         fecha: Timestamp.now(),
