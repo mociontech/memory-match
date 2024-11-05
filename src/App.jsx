@@ -139,7 +139,7 @@ class App extends Component {
                   type="text"
                   name="nombre"
                   placeholder="Nombre"
-                  className="mt"
+                  className="antonio"
                   value={this.state.nombre}
                   onChange={this.handleChange}
                 />
@@ -147,7 +147,7 @@ class App extends Component {
                   type="email"
                   name="correo"
                   placeholder="Correo"
-                  className="mt"
+                  className="antonio"
                   value={this.state.correo}
                   onChange={this.handleChange}
                 />
@@ -184,15 +184,7 @@ class App extends Component {
             >
               <button
                 onClick={() => this.volverAInicio()}
-                style={{
-                  display: "block",
-                  margin: "auto",
-                  width: "70%",
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                }}
+                className="lost-button antonio"
               >
                 Siguiente
               </button>

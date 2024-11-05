@@ -72,7 +72,7 @@ header {
 .portada {
   width: 20vw;
   height: 20vh;
-  background-color: #f5006f;
+  background-color: #e74428;
   border-radius: 10px;
 }
 
@@ -82,7 +82,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #e74428;
   border-radius: 10px;
 }
 
@@ -133,6 +133,14 @@ body {
     padding: 0;
   }
 
+  .lost-button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 500px;
+    transform: translate(-50%, 50%);
+  }
+
   .ganaste {
     width: 100vw;
     height: 100vh;
@@ -145,7 +153,6 @@ body {
   }
 
   .titulo {
-    background-image: url("pinones.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,8 +163,12 @@ body {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    padding: 4rem;
+    border-radius: 24px;
+    border: 2px solid white;
+    padding: 2rem;
+    margin-top: 50px;
     display: inline-block;
+    background-color: #636067;
   }
 
   .registro {
@@ -511,4 +522,19 @@ body {
       font-size: 40px;
     }
   }
+}
+
+@font-face {
+  font-family: "antonio";
+  src: url("/public/Antonio-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.antonio {
+  font-family: "antonio", sans-serif;
+}
+
+body {
+  font-family: "antonio", sans-serif;
 }
