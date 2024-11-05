@@ -119,6 +119,7 @@ class App extends Component {
   }
 
   volverAInicio() {
+    window.location.href = "https://landing-the-band.netlify.app"
     this.setState(getEstadoInicial());
     this.setState({
       juegoCompletado: false,
