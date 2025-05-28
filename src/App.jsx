@@ -2,7 +2,8 @@ import { Component } from "react";
 import construirBaraja from "./utils/construirBaraja";
 import Tablero from "./components/Tablero";
 import Header from "./components/Header";
-import { register } from "./utils/db";
+import Registro from "./components/Registro";
+
 // import axios from "axios";
 
 const getEstadoInicial = () => {
@@ -12,7 +13,7 @@ const getEstadoInicial = () => {
     parejaSeleccionada: [],
     estaComparando: false,
     numeroDeIntentos: 0,
-    juegoCompletado: false, // Nuevo estado para el juego completado
+    juegoCompletado: false, 
   };
 };
 
@@ -31,19 +32,7 @@ class App extends Component {
     this.timeoutId = null;
   }
 
-  handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
 
-  handleRegistro = async () => {
-    if (this.state.nombre && this.state.correo) {
-      this.setState({ registrado: true });
-      await register(this.state.nombre, this.state.correo);
-    } else {
-      alert("Por favor, completa todos los campos");
-    }
-  };
 
   seleccionarCarta(carta) {
     if (
@@ -102,7 +91,7 @@ class App extends Component {
       clearTimeout(this.timeoutId);
     }
     this.timeoutId = setTimeout(() => {
-      this.volverAInicio();
+      //this.volverAInicio();
     }, 120000);
 
     if (baraja.filter((carta) => !carta.fueAdivinada).length === 0) {
@@ -132,35 +121,7 @@ class App extends Component {
   render() {
     if (!this.state.registrado) {
       return (
-        <div className="top">
-          <div className="registro inicio">
-            <div className="registro-space">
-              <form>
-                <input
-                  type="text"
-                  name="nombre"
-                  placeholder="Nombre"
-                  className="antonio"
-                  value={this.state.nombre}
-                  onChange={this.handleChange}
-                />
-                <input
-                  type="email"
-                  name="correo"
-                  placeholder="Correo"
-                  className="antonio"
-                  value={this.state.correo}
-                  onChange={this.handleChange}
-                />
-                <button
-                  type="button"
-                  className="boton"
-                  onClick={this.handleRegistro}
-                ></button>
-              </form>
-            </div>
-          </div>
-        </div>
+        <Registro></Registro>
       );
     }
 
@@ -199,15 +160,26 @@ class App extends Component {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <Header
-          numeroDeIntentos={this.state.numeroDeIntentos}
-          resetearPartida={() => this.resetearPartida()}
-        />
-        <Tablero
-          baraja={this.state.baraja}
-          parejaSeleccionada={this.state.parejaSeleccionada}
-          seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
-        />
+
+    <Header 
+      numeroDeIntentos={this.state.numeroDeIntentos}
+      resetearPartida={() => this.resetearPartida()}
+    />
+
+
+        <div style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '100vh'
+                    }}>
+
+                      <Tablero 
+                        baraja={this.state.baraja}
+                        parejaSeleccionada={this.state.parejaSeleccionada}
+                        seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
+                      />
+                  </div>
       </div>
     );
   }

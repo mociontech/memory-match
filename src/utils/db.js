@@ -26,15 +26,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export async function register(name, correo) {
+export async function register(name,documento,correo,celular) {
   try {
-    const isExisting = await getDoc(doc(db, "DBTheBand", correo));
+    const isExisting = await getDoc(doc(db, "samsungmemory", correo));
     if (isExisting.data()) {
       return;
     } else {
-      await setDoc(doc(db, "DBTheBand", correo), {
+      await setDoc(doc(db, "samsungmemory", correo), {
         nombre: name,
+        documento: documento,
         correo: correo,
+        celular: celular,
         fecha: Timestamp.now(),
       });
     }

@@ -38,12 +38,11 @@ body {
 }
 
 .tablero {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 100px auto;
-  justify-content: center;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Máximo 4 columnas */
+  grid-template-rows: repeat(3, 1fr); /* Máximo 3 filas */
+  width: auto;
+  gap: 16px;
 }
 
 header {
@@ -65,24 +64,26 @@ header {
 }
 
 .carta {
-  width: 20vw;
-  height: 20vh;
+  width: 181px;
+  height: 181px;
 }
 
 .portada {
-  width: 20vw;
-  height: 20vh;
-  background-color: #e74428;
-  border-radius: 10px;
+  width: 181px; /* Cambié "full" por "100%" ya que "full" no es un valor válido para width */
+  height: 181px;
+  background-image: url("/bg_card.png");
+  background-size: cover; /* Esto hace que la imagen cubra todo el espacio */
+  background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+  background-position: center; /* Esto centra la imagen */
 }
 
 .contenido {
-  width: 20vw;
-  height: 20vh;
+  width: 181px;
+  height: 181px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e74428;
+  background-color: transparent;
   border-radius: 10px;
 }
 
@@ -92,8 +93,8 @@ header {
 }
 
 .card_img {
-  width: 20vw;
-  height: 20vh;
+  width: 181px;
+  height: 181px;
   object-fit: contain;
 }
 
@@ -114,7 +115,7 @@ body {
   .memory {
     width: 100vw;
     height: 100vh;
-    background-image: url("/bg-memory.webp");
+    background-image: url("/fondosamsung.webp");
     background-size: cover; /* Ajusta la imagen para cubrir todo el body */
     background-position: center; /* Centra la imagen en el body */
     background-repeat: repeat;
@@ -153,6 +154,8 @@ body {
   }
 
   .titulo {
+    position: absolute;
+    top: 20%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,7 +169,6 @@ body {
     border-radius: 24px;
     border: 2px solid white;
     padding: 2rem;
-    margin-top: 50px;
     display: inline-block;
     background-color: #636067;
   }
@@ -184,7 +186,7 @@ body {
   .inicio {
     margin: 0; /* Elimina el margen por defecto del body */
     padding: 0; /* Elimina el padding por defecto del body */
-    background-image: url("/login.webp");
+    background-image: url("/registro.webp");
     background-size: cover; /* Ajusta la imagen para cubrir todo el body */
     background-position: center; /* Centra la imagen en el body */
     background-repeat: repeat;
@@ -296,7 +298,35 @@ body {
     font-weight: 700;
     border: none;
     box-shadow: none;
+    
   }
+  .terminos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.label-terminos {
+  font-size: 16px;
+  color: #666;
+}
+
+.label-terminos a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.label-terminos a:hover {
+  text-decoration: underline;
+}
 
   @media (max-width: 900px), (max-height: 1600px) {
     .text2 {
