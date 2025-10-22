@@ -2,7 +2,8 @@ import { Component } from "react";
 import construirBaraja from "./utils/construirBaraja";
 import Tablero from "./components/Tablero";
 import Header from "./components/Header";
-import { register } from "./utils/db";
+import { AttendeeContext } from "./context/AttendeeContext";
+import { edgeApi } from "./sdk/init";
 // import axios from "axios";
 
 const getEstadoInicial = () => {
@@ -27,15 +28,25 @@ class App extends Component {
       nombre: "",
       correo: "",
       numero: "",
+      codigo: "",
+      user_code: "",
     };
     this.timeoutId = null;
   }
+  static contextType = AttendeeContext; 
 
   irARegistro = () => {
     this.setState({ pantalla: "registro" });
   };
 
-  irACodigoID = () => {
+  irACodigoID = async () => {
+     const { setAttendeeId } = this.context;
+    const data = await edgeApi.registerAttendee({
+      email: this.state.correo,
+      fullName: this.state.nombre
+    })
+    setAttendeeId(data?.attendee?.id);
+    this.setState((prev) => ({...prev, user_code : data?.attendee?.code}))
     this.setState({ pantalla: "codigo_id" });
   };
 
@@ -43,7 +54,10 @@ class App extends Component {
     this.setState({ pantalla: "codigo_teclado" });
   };
 
-  irAJuego = () => {
+  irAJuego = async () => {
+     const { setAttendeeId } = this.context;
+    const data = await edgeApi.findAttendeeByCode(this.state.codigo)
+    setAttendeeId(data?.attendee?.id); // 🔥 Cambia el valor del contexto
     this.setState({ pantalla: "juego" });
   };
 
@@ -124,7 +138,7 @@ class App extends Component {
     return nombreCarta1 === nombreCarta2;
   }
 
-  verificarSiHayGanador(baraja) {
+  async verificarSiHayGanador(baraja) {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
     }
@@ -154,7 +168,12 @@ class App extends Component {
         pantalla: "final",
         puntaje: puntos,
       });
-
+      const { attendeeId } = this.context;
+       await edgeApi.logExperiencePlay({
+      attendeeId: attendeeId,
+      play_timestamp: new Date().toISOString(),
+      score: puntos
+    })
       console.log(`Juego completado en ${intentos} intentos. Puntaje: ${puntos}`);
     }
   }
@@ -398,7 +417,7 @@ class App extends Component {
                 zIndex: 10
               }}
             />
-
+  
             <img
               src="src/assets/CampoVacio.png"
               alt="DEEL LOGO"
@@ -410,7 +429,23 @@ class App extends Component {
                 zIndex: 10
               }}
             />
-
+             <input
+            placeholder="TU CODIGO"
+            name="codigo"
+            value={this.state.user_code}
+            style={{
+                width: '60%',
+                top: '1200px',
+                color: 'black',
+                left: '220px',
+                position: 'absolute',
+                scale: 1.2,
+                fontSize: 80,
+                border: "none",
+                zIndex: 10,
+              }}
+            onChange={this.handleChange}
+            />
             <button
               style={{
                 width: '60%',
@@ -469,7 +504,20 @@ class App extends Component {
                 zIndex: 10
               }}
             />
-
+            <input
+            placeholder="TU CODIGO"
+            name="codigo"
+            value={this.state.codigo}
+            style={{
+                width: '60%',
+                top: '800px',
+                color: 'black',
+                left: '220px',
+                position: 'absolute',
+                zIndex: 10,
+              }}
+            onChange={this.handleChange}
+            />
             <button
               style={{
                 width: '60%',
