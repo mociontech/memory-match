@@ -1,0 +1,1453 @@
+
+
+.montserrat {
+  font-family: "Montserrat";
+}
+
+.title-svg {
+  display: none;
+}
+
+.humano-title {
+  display: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.humano-logo {
+  height: 35px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.tablero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5px;
+}
+
+header {
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-reiniciar {
+  background: #0383bc;
+  color: white;
+  position: absolute;
+  font-size: 5vw;
+  left: 32vw;
+  top: 75vh;
+  border-radius: 1vw;
+  padding: 0 8vw;
+}
+
+.carta {
+  width: 20vw;
+  height: 20vh;
+}
+
+.portada {
+  width: 20vw;
+  height: 20vh;
+  background-color: #23b9df;
+  border-radius: 10px;
+}
+
+.contenido {
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.ReactFlipCard {
+  width: 100%;
+  height: 100%;
+}
+
+.card_img {
+  width: 20vw;
+  height: 20vh;
+  object-fit: contain;
+}
+
+body {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+.felicitaciones {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+
+  .titulo {
+    background-image: url("pinones.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 4rem;
+    display: inline-block;
+  }
+
+  .registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .registro-space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .registratetitulo {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  .imagentop {
+    width: 60%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .imagenGracias {
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    align-content: center;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .text1 {
+    color: #fff;
+    text-align: center;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0;
+  }
+
+  .text2 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  form {
+    width: 70%;
+    max-width: 1080px;
+  }
+
+  input,
+  button {
+    width: 100%;
+    height: 5vh;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    border-color: #fff;
+    font-size: 4rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Montserrat";
+  }
+
+  button {
+    background: #06adbf;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background: #025a8a;
+  }
+
+  @media (max-width: 900px), (max-height: 1600px) {
+    .text2 {
+      font-size: 2rem;
+      margin: auto;
+    }
+    .text1 {
+      font-size: 2rem;
+    }
+
+    input,
+    button {
+      font-size: 1.8rem;
+    }
+
+    .registratetitulo {
+      font-size: 2rem;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .titulo {
+      font-size: 2rem;
+    }
+    header {
+      border: 1px solid transparent;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 500px), (max-height: 1000px) {
+    .text2 {
+      font-size: 1.3rem;
+      margin: auto;
+    }
+    .text1 {
+      font-size: 1.3rem;
+    }
+  }
+
+
+
+  .humano-logo {
+    display: none;
+  }
+
+  .humano-title {
+    display: block;
+    width: 60%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding-left: 45px;
+  }
+
+  .ganaste {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+  }
+
+  .titulo {
+    background-image: url("rectangle.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding: 20px;
+    display: inline-block;
+  }
+
+  .title-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .App {
+    flex-direction: row;
+  }
+
+  .registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .registro-space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagentop {
+    width: 35%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .imagenGracias {
+    /* width: 40%; */
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto 5rem;
+    display: block;
+    align-content: center;
+  }
+
+  .registratetitulo {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 800;
+  }
+  .text1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0;
+    margin: 5px;
+  }
+
+  .text2 {
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    margin: auto;
+    padding: 0;
+    font-size: 2.4rem;
+  }
+
+  form {
+    width: 50%;
+    max-width: 1080px;
+  }
+
+  input,
+  button {
+    width: 100%;
+    height: 6vh;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border-color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  button {
+    background: #06adbf;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #025a8a;
+  }
+
+  @media (max-width: 1430px), (max-height: 950px) {
+    .imagentop {
+      margin-bottom: 5px;
+    }
+    .text1 {
+      font-size: 50px;
+    }
+    .text2 {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 1042px), (max-height: 950px) {
+    .imagentop {
+      margin-bottom: 5px;
+    }
+    .text1 {
+      font-size: 50px;
+    }
+    .registratetitulo {
+      font-size: 40px;
+    }
+  }
+
+  /* Fondo de la pantalla de inicio */
+.inicio-container {
+  min-height: 100vh;      /* cubre toda la altura de la ventana */
+  width: 100%;
+  display: grid;
+  place-items: center;     /* centra el contenido */
+  /* Fondo: color base + imagen */
+  background: #061a40 url("/Inicio.png") center center / cover no-repeat;
+  /* Si quieres que el fondo no se mueva al hacer scroll: */
+  /* background-attachment: fixed; */
+}
+
+/* ===== Pantalla de Inicio (BTL 15 AÑOS) ===== */
+
+/* ========= VERTICAL / TOTEM (9:16, 1080x1920) ========= */
+@media (orientation: portrait) {
+  /* Fondo azul forzado en vertical */
+  body, .inicio-container {
+    background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed !important;
+  }
+
+  /* Lienzo gobernado por ALTO (no se corta, sin scroll) */
+  html, body, #root { height: 100%; }
+  body { overflow: hidden; }                 /* evita la barra que te sale abajo */
+
+  .inicio-stage {
+    position: relative;
+    height: 100vh;            /* manda el alto */
+    width: auto;              /* se calcula solo el ancho */
+    aspect-ratio: 9 / 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;         /* ¡que no corte el botón! */
+    padding-top: calc(60px * (100vh / 1920));   /* separa el bloque de arriba */
+  }
+
+  /* Tamaños exactos escalados por ALTO (referencia 1920) */
+  .inicio-logo {              /* 319 x 149 */
+    width:  calc(319.09px * (100vh / 1920));
+    height: auto;
+  }
+
+  .inicio-hero {              /* 782 x 491 */
+    width:  calc(782px * (100vh / 1920));
+    height: auto;
+    margin-top: calc(12px * (100vh / 1920));
+  }
+
+  .inicio-title-img {         /* ajusta si tu PNG del título es distinto */
+    width:  calc(700px * (100vh / 1920));
+    height: auto;
+    margin-top: calc(18px * (100vh / 1920));
+  }
+
+  .inicio-sub-img {
+    width:  calc(920px * (100vh / 1920));
+    height: auto;
+    margin-top: calc(10px * (100vh / 1920));
+  }
+
+  /* BOTÓN: posición absoluta y “pegado” arriba del borde inferior */
+  .inicio-btn-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width:  calc(770px * (100vh / 1920));    /* 770 x 120 en tu mock */
+    height: auto;
+
+    bottom: calc(1329px * (100vh / 1920));    /* ↑↓ Ajusta este número para subir/bajar el botón */
+    /* efecto */
+    cursor: pointer;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+    transition: transform 120ms ease, filter 120ms ease;
+  }
+  .inicio-btn-img:active { transform: translateX(-50%) scale(0.98); }
+}
+
+
+
+
+/* 5) Móvil / pantallas pequeñas (por si lo pruebas en celular) */
+@media (max-aspect-ratio: 9/16) {
+  .inicio-stage { width: 100vw; }
+  .inicio-logo { max-width: 220px; }
+  .inicio-hero { max-width: 540px; }
+  .inicio-title { font-size: 28px; }
+  .inicio-sub { font-size: 16px; padding: 0 16px; }
+  .inicio-btn-img { width: 82vw; }
+}
+
+/* === FONDO GLOBAL LIMPIO === */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: sans-serif;
+}
+
+/* Apaga fondos viejos del proyecto */
+body,
+.top,
+.registro,
+.App,
+.inicio-container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Pon el fondo NUEVO en la pantalla de inicio */
+.inicio-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed !important;
+}
+
+/* Lienzo 16:9 dentro del fondo */
+.inicio-stage {
+  aspect-ratio: 16 / 9;
+  width: min(100vw, 1920px);
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  align-items: start;
+  padding-top: clamp(24px, 3vh, 48px);
+}
+
+/* Bloque superior */
+.inicio-top {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  row-gap: 16px;
+  width: 100%;
+}
+
+/* TAMAÑOS EXACTOS a 1920, escalables si se reduce el ancho */
+.inicio-logo {
+  width: calc(319.09px * (100% / 1920));  /* ≈319x149 */
+  max-width: 319.09px;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+.inicio-hero {
+  width: calc(782px * (100% / 1920));     /* 782x491 */
+  max-width: 782px;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+  margin-top: clamp(8px, 1.5vh, 20px);
+}
+
+/* Título y subtítulo como imágenes */
+.inicio-title-img {
+  width: calc(700px * (100% / 1920));  /* ajusta si lo necesitas */
+  max-width: 700px;
+  height: auto;
+  margin: clamp(10px, 2vh, 20px) 0 0;
+}
+
+.inicio-sub-img {
+  width: calc(920px * (100% / 1920));  /* ajusta si lo necesitas */
+  max-width: 920px;
+  height: auto;
+  margin-top: clamp(8px, 1.5vh, 16px);
+}
+
+/* Botón */
+.inicio-btn-img {
+  margin-top: clamp(18px, 3vh, 36px);
+  width: clamp(240px, 28vw, 560px);
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+  transition: transform 120ms ease, filter 120ms ease;
+}
+.inicio-btn-img:active { transform: scale(0.98); }
+
+/* ===== Totem vertical (portrait 1080x1920) ===== */
+@media (orientation: portrait) {
+  /* Fondo: fuerzo tu imagen del inicio en portrait */
+  body, .inicio-container {
+    background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed !important;
+  }
+
+  /* Lienzo 9:16 que ocupa TODA la altura; el ancho se calcula automáticamente */
+  .inicio-stage {
+    aspect-ratio: 9 / 16;
+    height: 100vh;         /* gobierna por alto en vertical */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;     /* que no corte el botón */
+    padding-top: 32px;
+    padding-bottom: 48px;  /* espacio para el botón */
+    gap: 12px;
+  }
+
+  /* Escalamos por ALTO de pantalla (referencia 1920) para respetar proporciones de tu maqueta */
+  .inicio-logo {
+    width: calc(319.09px * (100vh / 1920));  /* 319px @ 1920 alto */
+    height: auto;
+    max-width: none;
+  }
+
+  .inicio-hero {
+    width: calc(782px * (100vh / 1920));     /* 782px @ 1920 alto */
+    height: auto;
+    max-width: none;
+  }
+
+  .inicio-title-img {
+    width: calc(700px * (100vh / 1920));     /* ajusta si lo necesitas */
+    height: auto;
+    max-width: none;
+    margin-top: 8px;
+  }
+
+  .inicio-sub-img {
+    width: calc(920px * (100vh / 1920));
+    height: auto;
+    max-width: none;
+    margin-top: 6px;
+  }
+
+  .inicio-btn-img {
+    width: calc(560px * (100vh / 1920));     /* tamaño del botón en tu maqueta */
+    height: auto;
+    margin-top: auto;        /* empuja el botón hacia abajo del lienzo */
+    margin-bottom: 24px;     /* respirito inferior */
+    align-self: center;
+  }
+}
+
+/* Apagar fondos heredados del proyecto para que no regresen */
+.top, .registro, .App, .inicio-container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ========= HORIZONTAL / LANDSCAPE (16:9, 1920x1080) ========= */
+@media (orientation: landscape) {
+  body, .inicio-container {
+    background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed !important;
+  }
+
+  html, body, #root { height: 100%; }
+  body { overflow: hidden; }
+
+  .inicio-stage {
+    position: relative;
+    width: 100vw;             /* manda el ancho */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    padding-top: calc(40px * (100vw / 1920));
+  }
+
+  /* Escalamos por ANCHO (referencia 1920) */
+  .inicio-logo {  width: calc(319.09px * (100vw / 1920)); height: auto; }
+  .inicio-hero {  width: calc(782px     * (100vw / 1920)); height: auto; margin-top: calc(12px * (100vw / 1920)); }
+  .inicio-title-img { width: calc(700px * (100vw / 1920)); height: auto; margin-top: calc(18px * (100vw / 1920)); }
+  .inicio-sub-img   { width: calc(920px * (100vw / 1920)); height: auto; margin-top: calc(10px * (100vw / 1920)); }
+
+  .inicio-btn-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width:  calc(770px * (100vw / 1920));
+    height: auto;
+    bottom: calc(80px  * (100vw / 1920));  /* distancia al borde inferior en landscape */
+  }
+  .inicio-btn-img:active { transform: translateX(-50%) scale(0.98); }
+}
+
+/* ===== FIX: Botón en portrait, centrado y pegado abajo ===== */
+@media (orientation: portrait) {
+  .inicio-stage {
+    position: relative !important;   /* el absoluto del botón toma a este contenedor */
+    height: 100vh !important;
+    width: auto !important;
+    overflow: visible !important;
+  }
+
+  .inicio-btn-img {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    /* Ubicación vertical: AJUSTA solo este valor */
+    bottom: 14vh !important;   /* prueba 14vh (equivale a ~268px en 1920 de alto) */
+
+    /* elimina cualquier efecto de reglas anteriores */
+    top: auto !important;
+    margin: 0 !important;
+    align-self: auto !important;
+
+    /* tamaño (tu mock 770x120 escalado por alto) */
+    width: calc(770px * (100vh / 1920)) !important;
+    height: auto !important;
+
+    z-index: 5;  /* por si algo lo tapa */
+  }
+}
+
+/* ========= HORIZONTAL / LANDSCAPE (16:9, 1920x1080) ========= */
+@media (orientation: landscape) {
+  /* 🎛️ CONTROLES DE ESPACIADO (en px @1920) */
+  :root {
+    --top-pad:     40;   /* separación desde el borde superior del lienzo */
+    --gap-hero:    16;   /* espacio entre LOGO y 15 AÑOS */
+    --gap-title:   20;   /* espacio entre 15 AÑOS y "Memory Match" (PNG) */
+    --gap-sub:     12;   /* espacio entre "Memory Match" y subtítulo (PNG) */
+    --btn-bottom:  600;   /* distancia del botón al borde inferior */
+  }
+
+  /* Fondo en horizontal */
+  body, .inicio-container {
+    background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed !important;
+  }
+
+  html, body, #root { height: 100%; }
+  body { overflow: hidden; }
+
+  /* Lienzo 16:9 que manda por ANCHO */
+  .inicio-stage {
+    position: relative;
+    width: 100vw;             /* manda el ancho */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    /* 🟦 separación desde arriba (control con --top-pad) */
+    padding-top: calc(var(--top-pad) * (100vw / 1920));
+  }
+
+  /* TAMAÑOS (ya los tenías, los dejo por claridad) */
+  .inicio-logo  { width: calc(319.09px * (100vw / 1920)); height: auto; }
+  .inicio-hero  { width: calc(782px     * (100vw / 1920)); height: auto; }
+  .inicio-title-img { width: calc(700px * (100vw / 1920)); height: auto; }
+  .inicio-sub-img   { width: calc(920px * (100vw / 1920)); height: auto; }
+
+  /* 🟪 ESPACIOS ENTRE ELEMENTOS (controlables) */
+  .inicio-hero      { margin-top: calc(var(--gap-hero)  * (100vw / 1920)); }
+  .inicio-title-img { margin-top: calc(var(--gap-title) * (100vw / 1920)); }
+  .inicio-sub-img   { margin-top: calc(var(--gap-sub)   * (100vw / 1920)); }
+
+  /* 🟩 Botón centrado y a cierta distancia del borde inferior */
+  .inicio-btn-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width:  calc(770px * (100vw / 1920));   /* 770x120 de tu mock */
+    height: auto;
+    bottom: calc(var(--btn-bottom) * (100vw / 1920));
+    cursor: pointer;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+    transition: transform 120ms ease, filter 120ms ease;
+  }
+  .inicio-btn-img:active { transform: translateX(-50%) scale(0.98); }
+}
+
+/* ========= VERTICAL / TOTEM (9:16, 1080x1920) - CONTROLES ========= */
+@media (orientation: portrait) {
+  /* 🎛️ Cambia estos números (px pensados para alto 1920). 
+     Se escalan automáticamente con la altura del totem. */
+  :root {
+    --v-top-pad:    80;   /* separación desde arriba del lienzo */
+    --v-gap-hero:   30;   /* espacio entre LOGO y "15 AÑOS" */
+    --v-gap-title:  120;   /* entre "15 AÑOS" y "Memory Match" (PNG) */
+    --v-gap-sub:    18;   /* entre "Memory Match" y subtítulo (PNG) */
+    --v-btn-bottom: 400;  /* distancia del botón al borde inferior */
+  }
+
+  /* Lienzo gobernado por ALTO (sin scroll) */
+  html, body, #root { height: 100%; }
+  body { overflow: hidden; }
+
+  .inicio-stage {
+    position: relative !important;
+    height: 100vh !important;     /* manda el alto */
+    width: auto !important;
+    aspect-ratio: 9 / 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible !important;
+    /* 🟦 separación desde arriba */
+    padding-top: calc(var(--v-top-pad) * (100vh / 1920));
+  }
+
+  /* TAMAÑOS (siguen escalando por alto) */
+  .inicio-logo  { width: calc(319.09px * (100vh / 1920)); height: auto; }
+  .inicio-hero  { width: calc(782px     * (100vh / 1920)); height: auto; }
+  .inicio-title-img { width: calc(700px * (100vh / 1920)); height: auto; }
+  .inicio-sub-img   { width: calc(920px * (100vh / 1920)); height: auto; }
+
+  /* 🟪 ESPACIOS ENTRE ELEMENTOS (controlables) */
+  .inicio-hero      { margin-top: calc(var(--v-gap-hero)  * (100vh / 1920)); }
+  .inicio-title-img { margin-top: calc(var(--v-gap-title) * (100vh / 1920)); }
+  .inicio-sub-img   { margin-top: calc(var(--v-gap-sub)   * (100vh / 1920)); }
+
+  /* 🟩 Botón centrado, pegado al borde inferior con separación */
+  .inicio-btn-img {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width:  calc(1000px * (100vh / 1920));   /* 770x120 de tu mock */
+    height: auto;
+
+    bottom: calc(var(--v-btn-bottom) * (100vh / 1920)) !important;
+    margin: 0 !important; top: auto !important;
+  }
+
+  
+}
+
+/* === Control de tamaño del botón en VERTICAL (totem) === */
+@media (orientation: portrait) {
+  :root {
+    /* ancho del botón a 1920 de alto (tu mock era 770; prueba 900 para más grande) */
+    --v-btn-w: 720;
+  }
+  .inicio-btn-img {
+    width: calc(var(--v-btn-w) * (100vh / 1920)) !important;
+    height: auto !important;
+  }
+}
+
+
+
+/* ===== VERTICAL / TOTEM (1080x1920) — header + tablero centrado ===== */
+@media (orientation: portrait) {
+  :root {
+    /* Header */
+    --v-header-pad-top: 220;     /* sube/baja todo el header */
+    --v-side-pad: 120;           /* separa BTL y 15AÑOS hacia los lados */
+
+    /* Tamaños logos (px @1920 alto) */
+    --v-btl-w: 340.14;  --v-btl-h: 159.14;
+    --v-15-w:  409.54;  --v-15-h: 257.35;
+
+    /* Chip INTENTOS */
+    --v-chip-w: 463; --v-chip-h: 96.46; --v-chip-font: 44;
+
+    /* Tablero 3×4 */
+    --v-card: 210;          /* lado de la carta (px @1920) */
+    --v-grid-gap: 34;       /* espacio entre cartas (px @1920) */
+    --v-card-radius: 24;    /* radio de esquina */
+  }
+
+  /* Lienzo del juego: centra todo en X */
+  .App{
+    display: grid !important;
+    grid-template-rows: auto auto 1fr;
+    justify-items: center;     /* <— centra header y tablero */
+    align-items: start;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .hdr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(var(--v-header-pad-top) * (100vh / 1920));
+  }
+  .hdr-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:  calc(var(--v-side-pad) * (100vh / 1920));
+    padding-right: calc(var(--v-side-pad) * (100vh / 1920));
+  }
+  .hdr-btl{ width: calc(var(--v-btl-w) * (100vh / 1920)); height:auto; }
+  .hdr-15 { width: calc(var(--v-15-w) * (100vh / 1920)); height:auto; }
+
+  /* Chip INTENTOS (blanco, como el mock) */
+  .hdr-intentos{
+    margin-top: calc(24 * (100vh / 1920));
+    width:  calc(var(--v-chip-w) * (100vh / 1920));
+    height: calc(var(--v-chip-h) * (100vh / 1920));
+    border-radius: 9999px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.12) !important;
+    outline: 2px solid rgba(255,255,255,0.28) !important;
+    color: #fff !important;
+    font-weight: 800;
+    font-size: calc(var(--v-chip-font) * (100vh / 1920));
+    letter-spacing: .5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  .hdr-intentos span{ color: inherit !important; }
+
+  /* ========= TABLERO 3×4 CENTRADO ========= */
+  /* Tamaños calculados a partir del alto */
+  .tablero{
+    /* cartas y filas/columnas */
+    --card-size: calc(var(--v-card) * (100vh / 1920));
+    --gap-size:  calc(var(--v-grid-gap) * (100vh / 1920));
+
+    display: grid !important;
+    grid-template-columns: repeat(3, var(--card-size));
+    grid-auto-rows: var(--card-size);
+    gap: var(--gap-size);
+
+    /* Ancho exacto del grid (3 cartas + 2 gaps) para poder centrarlo */
+    --grid-width: calc( (3 * var(--card-size)) + (2 * var(--gap-size)) );
+    width: var(--grid-width) !important;
+
+    /* centrado real en X */
+    margin: calc(40 * (100vh / 1920)) auto 0 !important;
+    justify-items: center;
+  }
+
+  /* Cartas: colores y bordes como tu mock */
+  .carta,
+  .portada,
+  .contenido,
+  .card_img,
+  .ReactFlipCard{
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--v-card-radius) * (100vh / 1920));
+  }
+  .portada{ background: #9bd1ff; }  /* azul claro */
+}
+
+
+
+
+
+
+
+
+/* ===== Header horizontal 1920x1080 ===== */
+@media (orientation: landscape) {
+  :root{
+    --h-header-pad-top: 40;
+    --h-side-pad: 120;
+    --h-btl-w: 340.14;  --h-15-w: 409.54;
+    --h-chip-w: 463;    --h-chip-h: 96.46; --h-chip-font: 36;
+  }
+  .hdr { margin-top: calc(var(--h-header-pad-top) * (100vw / 1920)); }
+  .hdr-top{
+    padding-left:  calc(var(--h-side-pad) * (100vw / 1920));
+    padding-right: calc(var(--h-side-pad) * (100vw / 1920));
+  }
+  .hdr-btl{ width: calc(var(--h-btl-w) * (100vw / 1920)); height:auto; }
+  .hdr-15 { width: calc(var(--h-15-w)  * (100vw / 1920)); height:auto; }
+
+  .hdr-intentos{
+    margin-top: calc(24 * (100vw / 1920));
+    width:  calc(var(--h-chip-w)   * (100vw / 1920));
+    height: calc(var(--h-chip-h)   * (100vw / 1920));
+    font-size: calc(var(--h-chip-font) * (100vw / 1920));
+    border-radius: 9999px;
+    display:flex; align-items:center; justify-content:center;
+    background: rgba(255,255,255,0.12) !important;
+    outline: 2px solid rgba(255,255,255,0.28) !important;
+    color:#fff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+}
+
+
+/* ===== FIX TABLERO VERTICAL (3×4 centrado) ===== */
+@media (orientation: portrait) {
+  :root {
+    --v-card: 210;        /* tamaño base de la carta (px @1920) */
+    --v-grid-gap: 34;     /* separación entre cartas (px @1920) */
+  }
+
+  .tablero{
+    /* medidas basadas en el alto del totem */
+    --card-size: calc(var(--v-card) * (100vh / 1920));
+    --gap-size:  calc(var(--v-grid-gap) * (100vh / 1920));
+
+    display: grid !important;
+    grid-template-columns: repeat(3, var(--card-size)) !important;
+    grid-auto-rows: var(--card-size) !important;
+    gap: var(--gap-size) !important;
+
+    /* ancho exacto del grid = 3 cartas + 2 gaps  → para centrarlo */
+    --grid-width: calc( (3 * var(--card-size)) + (2 * var(--gap-size)) );
+    width: var(--grid-width) !important;
+    max-width: 92vw !important;
+
+    margin: calc(40 * (100vh / 1920)) auto 0 !important;
+    justify-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* cada carta ocupa su celda al 100% y es cuadrada */
+  .tablero > *{
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  /* por si quedaban tamaños viejos */
+  .carta, .portada, .contenido, .card_img, .ReactFlipCard{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: calc(24 * (100vh / 1920)) !important;
+  }
+
+  /* color de la portada como tu mock */
+  .portada{ background: #9bd1ff !important; }
+}
+
+/* ======== VERTICAL / TOTEM ======== */
+@media (orientation: portrait) {
+  :root {
+    /* Cartas (px pensados para alto 1920; ajusta a gusto) */
+    --v-card: 210;
+    --v-gap: 34;
+    --v-radius: 24;
+  }
+
+  /* Panel detrás del tablero (opcional) */
+  .board{
+    /* calculamos el ancho/alto exactos del grid para dibujar el panel */
+    --card: calc(var(--v-card) * (100vh / 1920));
+    --gap:  calc(var(--v-gap)  * (100vh / 1920));
+
+    /* 3 columnas -> 3 cartas + 2 gaps */
+    --grid-w: calc((3 * var(--card)) + (2 * var(--gap)));
+    /* 4 filas -> 4 cartas + 3 gaps */
+    --grid-h: calc((4 * var(--card)) + (3 * var(--gap)));
+
+    width:  calc(var(--grid-w) + (2 * 16px));  /* 16px de padding lateral */
+    height: calc(var(--grid-h) + (2 * 16px));  /* 16px de padding vertical */
+    padding: 16px;
+    margin: calc(40 * (100vh / 1920)) auto 0;
+
+    /* estilo del panel: azul suave translúcido + borde redondeado */
+    background: rgba(13, 155, 211, 0.10);
+    border-radius: calc(var(--v-radius) * (100vh / 1920));
+    box-shadow: 0 14px 40px rgba(0,0,0,.28);
+    backdrop-filter: blur(2px);  /* opcional */
+  }
+
+  /* TABLERO 3×4 CENTRADO DENTRO DEL PANEL */
+  .tablero{
+    --card: calc(var(--v-card) * (100vh / 1920));
+    --gap:  calc(var(--v-gap)  * (100vh / 1920));
+
+    display: grid !important;
+    grid-template-columns: repeat(3, var(--card)) !important;
+    grid-template-rows:    repeat(4, var(--card)) !important;  /* ← filas explícitas */
+    gap: var(--gap) !important;
+
+    width: calc((3 * var(--card)) + (2 * var(--gap))) !important;
+    height: calc((4 * var(--card)) + (3 * var(--gap))) !important;
+
+    margin: 0 auto !important;
+    justify-items: center !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Cada carta ocupa 100% de su celda (cuadrada) */
+  .tablero > *{
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  /* Apariencia de la carta como en el mock */
+  .carta,
+  .portada,
+  .contenido,
+  .card_img,
+  .ReactFlipCard{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: calc(var(--v-radius) * (100vh / 1920)) !important;
+  }
+  .portada{ background: #20B8E0 !important; } /* azul claro del mock */
+}
+
+/* ==== FIX: que se vean las portadas (cuadros azules) en vertical ==== */
+@media (orientation: portrait) {
+
+  /* Asegura que el componente y sus dos caras ocupen la celda completa */
+  .ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: calc(24 * (100vh / 1920)) !important;
+  }
+
+  /* La cara frontal (portada) debe ser visible y con fondo */
+  .ReactFlipCard__Front,
+  .portada {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+    background: #20B8E0 !important;          /* azul del mock */
+    border-radius: inherit !important;
+    box-shadow: 0 2px 0 rgba(255,255,255,.12) inset;
+  }
+
+  /* La cara de contenido ocupa todo y se recorta dentro de la carta */
+  .ReactFlipCard__Back,
+  .contenido {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: inherit !important;
+    overflow: hidden;
+    background: #fff;                          /* fondo blanco cuando está volteada */
+  }
+
+  /* Imagen interna de la carta */
+  .card_img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+
+  }
+
+    /* — Panel contenedor del tablero — */
+.board {
+  position: relative;
+  /* ancho/alto del panel para teléfonos verticales */
+  width: min(92vw, 680px);
+  height: min(120vw, 880px);
+  margin: 16px auto 6vh;
+}
+
+/* DIBUJO DE LA RETÍCULA (los cuadritos azules de guía) */
+.board::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* dejas un respiro al borde para que no pegue contra el panel */
+  padding: clamp(6px, 2vw, 16px);
+  background: url("") center / contain no-repeat;
+  opacity: 0.9;          /* si la ves muy fuerte, bájalo a 0.7 */
+  pointer-events: none;  /* que no bloquee clics en las cartas */
+  border-radius: 24px;   /* redondeo igual al PNG */
+}
+
+/* GRID del tablero: 3 x 4 */
+.tablero {
+  position: relative;
+  z-index: 1; /* por encima de la imagen de guía */
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: clamp(10px, 2.4vw, 22px);
+  align-items: center;
+  justify-items: center;
+  padding: clamp(6px, 2vw, 16px); /* coincide con el padding del ::before */
+}
+
+/* Tamaño de cada carta para que “caiga” dentro de cada cuadro */
+.carta,
+.portada,
+.contenido,
+.card_img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border-radius: 18px;
+}
+
+/* Que la cara oculta (portada) SEA AZUL cuando está boca abajo */
+.portada {
+  background-color: #8fd0ff;      /* azul claro del mock */
+}
+
+/* Si tu flip usa ReactCardFlip: asegúrate de no forzar transparencia */
+.ReactFlipCard {
+  width: 100%;
+  height: 100%;
+}
+  }
+
+
+/* -- Quitar panel y guía del tablero en vertical -- */
+@media (orientation: portrait) {
+  /* borra el panel translúcido */
+  .board{
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;     /* opcional: sin acolchado extra */
+    width: auto !important;    /* deja que el grid defina el ancho */
+    height: auto !important;
+  }
+  /* borra la imagen/guía de cuadritos si estaba activa */
+  .board::before{
+    content: none !important;
+  }
+
+  /* como quitamos el padding del panel, centramos el grid tal cual */
+  .tablero{
+    margin: calc(40 * (100vh / 1920)) auto 0 !important;
+  }
+}
+
+/* =============================
+   PANTALLA FIN — CSS LIMPIO
+   ============================= */
+
+/* Fondo + layout base */
+.fin{
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+  box-sizing: border-box;
+  background: #061a40 url("/Inicio.png") center center / cover no-repeat fixed;
+  overflow-x: hidden; /* evita corrimientos a la derecha */
+}
+
+/* Fila superior con logos */
+.fin-top{
+  width: 100%;
+  max-width: 1920px;         /* lienzo máximo */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Columna central */
+.fin-panel{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 16px;
+}
+
+/* Texto del párrafo */
+.fin-msg{
+  color: #e9f1ff;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 auto;
+}
+
+/* Efecto suave a las imágenes principales */
+.fin-lograste,
+.fin-gracias,
+.fin-volver{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,.35));
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.fin-volver{ cursor: pointer; transition: transform .12s ease; }
+.fin-volver:active{ transform: scale(.98); }
+
+/* ====== VERTICAL / TÓTEM (1080x1920) — escala por ALTO ====== */
+@media (orientation: portrait){
+  :root{
+    /* paddings / separaciones (px @1920 de alto) */
+    --fin-top-pad:   220;
+    --fin-side-pad:  120;
+    --fin-gap:        24;
+
+    /* tamaños (px @1920 alto) */
+    --fin-btl-w:      340.14;   /* logo BTL mini */
+    --fin-15-w:       409.54;   /* 15 años */
+    --fin-title-w:    680;      /* PNG ¡Lo lograste! */
+    --fin-msg-w:     1060;      /* ancho máx del párrafo */
+    --fin-msg-font:    70;      /* tamaño del párrafo */
+    --fin-gracias-w:  600;      /* PNG ¡Gracias por participar! */
+    --fin-btn-w:      820;      /* PNG botón Volver */
+  }
+
+  .fin{
+    padding-top: calc(var(--fin-top-pad) * (100vh / 1920));
+  }
+  .fin-top{
+    padding-left:  calc(var(--fin-side-pad) * (100vh / 1920));
+    padding-right: calc(var(--fin-side-pad) * (100vh / 1920));
+  }
+
+  /* logos arriba */
+  .hdr-btl{ width: calc(var(--fin-btl-w) * (100vh / 1920)); height:auto; }
+  .hdr-15 { width: calc(var(--fin-15-w)  * (100vh / 1920)); height:auto; }
+
+  /* bloque central */
+  .fin-panel{
+    margin-top: calc(60 * (100vh / 1920));
+    gap: calc(var(--fin-gap) * (100vh / 1920));
+  }
+
+  /* piezas */
+  .fin-lograste{ width: calc(var(--fin-title-w) * (100vh / 1920)); }
+  .fin-msg{
+    max-width: calc(var(--fin-msg-w) * (100vh / 1920));
+    font-size: calc(var(--fin-msg-font) * (100vh / 1920));
+  }
+  .fin-gracias{ width: calc(var(--fin-gracias-w) * (100vh / 1920)); }
+  .fin-volver { width: calc(var(--fin-btn-w) * (100vh / 1920)); margin-top: calc(36 * (100vh / 1920)); }
+}
+
+/* ====== HORIZONTAL / LANDSCAPE (1920x1080) — escala por ANCHO ====== */
+@media (orientation: landscape){
+  :root{
+    --fin-top-pad-h:   40;
+    --fin-side-pad-h: 120;
+    --fin-gap-h:       16;
+
+    --fin-btl-w-h:    340.14;
+    --fin-15-w-h:     409.54;
+    --fin-title-w-h:  560;
+    --fin-msg-w-h:    920;
+    --fin-msg-font-h:  30;
+    --fin-gracias-w-h: 460;
+    --fin-btn-w-h:     560;
+  }
+
+  .fin{
+    padding-top: calc(var(--fin-top-pad-h) * (100vw / 1920));
+  }
+  .fin-top{
+    padding-left:  calc(var(--fin-side-pad-h) * (100vw / 1920));
+    padding-right: calc(var(--fin-side-pad-h) * (100vw / 1920));
+  }
+
+  .hdr-btl{ width: calc(var(--fin-btl-w-h) * (100vw / 1920)); height:auto; }
+  .hdr-15 { width: calc(var(--fin-15-w-h)  * (100vw / 1920)); height:auto; }
+
+  .fin-panel{
+    margin-top: calc(40 * (100vw / 1920));
+    gap: calc(var(--fin-gap-h) * (100vw / 1920));
+  }
+
+  .fin-lograste{ width: calc(var(--fin-title-w-h) * (100vw / 1920)); }
+  .fin-msg{
+    max-width: calc(var(--fin-msg-w-h) * (100vw / 1920));
+    font-size: calc(var(--fin-msg-font-h) * (100vw / 1920));
+  }
+  .fin-gracias{ width: calc(var(--fin-gracias-w-h) * (100vw / 1920)); }
+  .fin-volver { width: calc(var(--fin-btn-w-h) * (100vw / 1920)); margin-top: calc(28 * (100vw / 1920)); }
+}
+
+/* === AJUSTES FIN — ESPACIADOS CONTROLADOS === */
+
+/* PORTRAIT (tótem 1080x1920): los números son px a 1920 de alto */
+@media (orientation: portrait){
+  :root{
+    /* 🔧 cambia estos valores para mover cada bloque */
+    --fin-space-logos:   210;  /* separación bajo la fila de logos */
+    --fin-space-title:   36;  /* debajo de “¡Lo lograste!” */
+    --fin-space-msg:     22;  /* debajo del párrafo */
+    --fin-space-gracias: 28;  /* debajo de “¡Gracias por participar!” */
+    --fin-space-btn:     60;  /* margen superior del botón */
+  }
+
+  /* aplica las separaciones (escaladas por alto) */
+  .fin-panel{ margin-top: calc(var(--fin-space-logos) * (100vh / 1920)); }
+  .fin-lograste{ margin: 0 0 calc(var(--fin-space-title) * (100vh / 1920)); }
+  .fin-msg{      margin: 0 0 calc(var(--fin-space-msg)   * (100vh / 1920)); }
+  .fin-gracias{  margin: 0 0 calc(var(--fin-space-gracias) * (100vh / 1920)); }
+  .fin-volver{   margin-top: calc(var(--fin-space-btn)    * (100vh / 1920)); }
+}
+
+/* LANDSCAPE (1920x1080): mismos knobs pero escalados por ancho */
+@media (orientation: landscape){
+  :root{
+    --fin-space-logos-h:   28;
+    --fin-space-title-h:   20;
+    --fin-space-msg-h:     14;
+    --fin-space-gracias-h: 18;
+    --fin-space-btn-h:     28;
+  }
+
+  .fin-panel{   margin-top: calc(var(--fin-space-logos-h)   * (100vw / 1920)); }
+  .fin-lograste{margin: 0 0   calc(var(--fin-space-title-h) * (100vw / 1920)); }
+  .fin-msg{     margin: 0 0   calc(var(--fin-space-msg-h)   * (100vw / 1920)); }
+  .fin-gracias{ margin: 0 0   calc(var(--fin-space-gracias-h) * (100vw / 1920)); }
+  .fin-volver{  margin-top:   calc(var(--fin-space-btn-h)   * (100vw / 1920)); }
+}
+
