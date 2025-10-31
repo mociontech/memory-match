@@ -189,7 +189,7 @@ class App extends Component {
           style={{
             width: "100vw",
             height: "100vh",
-            backgroundImage: "url('/assets/Inicio.png')",
+            backgroundImage: "url('/public/Inicio.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -232,7 +232,7 @@ class App extends Component {
               }}
             >
               <img
-                src="/assets/BtnInicio.png"
+                src="/public/BtnInicio.png"
                 alt="Inicio"
                 style={{ width: '180px', height: '180px' }}
               />
@@ -256,7 +256,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/assets/NombreInput.png')",
+                  backgroundImage: "url('/public/NombreInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -281,7 +281,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/assets/CorreoInput.png')",
+                  backgroundImage: "url('/public/CorreoInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -306,7 +306,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/assets/EmpresaInput.png')",
+                  backgroundImage: "url('/public/EmpresaInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -328,7 +328,7 @@ class App extends Component {
                 }}
                 onClick={this.handleRegistro}
               >
-                <img src="/assets/Continuar.png" alt="Registrarme" className="h-full w-auto" />
+                <img src="/public/Continuar.png" alt="Registrarme" className="h-full w-auto" />
               </button>
 
             </div>
@@ -355,7 +355,7 @@ class App extends Component {
             }}
           >
             <img
-              src="/assets/BtnInicio.png"
+              src="/public/BtnInicio.png"
               alt="Inicio"
               style={{ width: '180px', height: '180px' }}
             />
@@ -383,7 +383,7 @@ class App extends Component {
           style={{
             width: "100vw",
             height: "100vh",
-            backgroundImage: "url('/assets/final.png')",
+            backgroundImage: "url('/public/final.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
