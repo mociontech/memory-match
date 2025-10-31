@@ -13,7 +13,7 @@ html, body, #root {
 .login-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/Registro.png");
+  background-image: url("/assets/Registro.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ html, body, #root {
 .registro-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/Registro.png");
+  background-image: url("/assets/Registro.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ html, body, #root {
 .final-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/final.jpg");
+  background-image: url("/assets/final.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
