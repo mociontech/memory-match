@@ -256,7 +256,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/NombreInput.png')",
+                  backgroundImage: "url('/public/NombreInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -281,7 +281,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/CorreoInput.png')",
+                  backgroundImage: "url('/public/CorreoInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -306,7 +306,7 @@ class App extends Component {
                   textAlign: 'left',
                   paddingLeft: '120px',
                   height: '100px',
-                  backgroundImage: "url('/EmpresaInput.png')",
+                  backgroundImage: "url('/public/EmpresaInput.png')",
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center',
@@ -328,7 +328,7 @@ class App extends Component {
                 }}
                 onClick={this.handleRegistro}
               >
-                <img src="/Continuar.png" alt="Registrarme" className="h-full w-auto" />
+                <img src="/public/Continuar.png" alt="Registrarme" className="h-full w-auto" />
               </button>
 
             </div>
