@@ -355,7 +355,7 @@ class App extends Component {
             }}
           >
             <img
-              src="/public/BtnInicio.png"
+              src="/BtnInicio.png"
               alt="Inicio"
               style={{ width: '180px', height: '180px' }}
             />
@@ -383,7 +383,7 @@ class App extends Component {
           style={{
             width: "100vw",
             height: "100vh",
-            backgroundImage: "url('/public/final.png')",
+            backgroundImage: "url('/final.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
