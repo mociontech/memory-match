@@ -54,19 +54,18 @@ class App extends Component {
 
   handleRegistro = async () => {
     const { nombre, correo, empresa } = this.state;
-
-    if (!nombre || !correo || !empresa) {
-      alert("Por favor, completa todos los campos");
-      return;
-    }
-
+    // Enviamos los datos siempre, sin validar longitud o presencia
     try {
       await register(nombre, correo, empresa);
-      this.irAJuego();
     } catch (error) {
-      console.error("Error en registro:", error);
-      alert("Hubo un error al registrar. Por favor intenta nuevamente.");
+      // Logueamos el error pero continuamos: se pidió que el envío
+      // siempre ocurra y que el juego continúe independientemente
+      // de la respuesta del endpoint.
+      console.error("Error en register (ignorado):", error);
     }
+
+    // Ir al juego incluso si el registro falló o alguna campo está vacío
+    this.irAJuego();
   };
 
   seleccionarCarta(carta) {
@@ -214,11 +213,24 @@ class App extends Component {
     }
 
 
-
     if (this.state.pantalla === "registro") {
       return (
-        <div className="login-screen flex flex-col justify-center items-center">
-          <div className="relative z-10 flex flex-col items-center">
+        <div
+          className="login-screen flex flex-col justify-center items-center"
+          style={{
+            position: "relative",
+            overflowY: "auto",
+            WebkitOverflowScrolling: "touch",
+            width: "100vw",
+            height: "100vh",
+            backgroundImage: "url('/Registro.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            touchAction: "manipulation",
+          }}
+        >
+          <div className="relative z-10 flex flex-col items-center w-full h-full">
+            {/* Botón Inicio */}
             <button
               onClick={this.volverAInicio}
               style={{
@@ -228,7 +240,7 @@ class App extends Component {
                 background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                zIndex: 1000,   // encima de todo
+                zIndex: 1000,
               }}
             >
               <img
@@ -237,105 +249,115 @@ class App extends Component {
                 style={{ width: '180px', height: '180px' }}
               />
             </button>
-            {/* Formulario */}
-            <div className="flex flex-col items-center gap-8 w-full max-w-[600px] mt-32 px-4">
 
-              <input
-                type="text"
-                placeholder="Nombre"
-                name="nombre"
-                value={this.state.nombre}
-                autoComplete="off"
-                className="niveau-input"
-                style={{
-                  width: '70%',
-                  top: '900px',
-                  left: '110px',
-                  position: 'absolute',
-                  zIndex: 10,
-                  textAlign: 'left',
-                  paddingLeft: '120px',
-                  height: '100px',
-                  backgroundImage: "url('/NombreInput.png')",
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  border: 'none',
-                }}
-                onChange={this.handleChange}
-              />
+            {/* Input Nombre */}
+            <input
+              type="text"
+              placeholder="Nombre"
+              name="nombre"
+              value={this.state.nombre}
+              autoComplete="off"
+              inputMode="text"
+              className="niveau-input"
+              style={{
+                width: '70%',
+                top: '900px',
+                left: '110px',
+                position: 'absolute',
+                zIndex: 10,
+                textAlign: 'left',
+                paddingLeft: '120px',
+                height: '100px',
+                backgroundImage: "url('/NombreInput.png')",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                border: 'none',
+                fontSize: '45px',
+                color: 'white',
+              }}
+              onChange={this.handleChange}
+            />
 
-              <input
-                type="email"
-                placeholder="Correo corporativo"
-                name="correo"
-                value={this.state.correo}
-                autoComplete="off"
-                className="niveau-input"
-                style={{
-                  width: '70%',
-                  top: '1050px',
-                  left: '110px',
-                  position: 'absolute',
-                  zIndex: 10,
-                  textAlign: 'left',
-                  paddingLeft: '120px',
-                  height: '100px',
-                  backgroundImage: "url('/CorreoInput.png')",
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  border: 'none',
-                }}
-                onChange={this.handleChange}
-              />
+            {/* Input Correo */}
+            <input
+              type="email"
+              placeholder="Correo corporativo"
+              name="correo"
+              value={this.state.correo}
+              autoComplete="off"
+              inputMode="email"
+              className="niveau-input"
+              style={{
+                width: '70%',
+                top: '1050px',
+                left: '110px',
+                position: 'absolute',
+                zIndex: 10,
+                textAlign: 'left',
+                paddingLeft: '120px',
+                height: '100px',
+                backgroundImage: "url('/CorreoInput.png')",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                border: 'none',
+                fontSize: '45px',
+                color: 'white',
+              }}
+              onChange={this.handleChange}
+            />
 
-              <input
-                type="text"
-                placeholder="Empresa"
-                name="empresa"
-                value={this.state.empresa}
-                autoComplete="off"
-                className="niveau-input"
-                style={{
-                  width: '70%',
-                  top: '1200px',
-                  left: '110px',
-                  position: 'absolute',
-                  zIndex: 10,
-                  textAlign: 'left',
-                  paddingLeft: '120px',
-                  height: '100px',
-                  backgroundImage: "url('/EmpresaInput.png')",
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  border: 'none',
-                }}
-                onChange={this.handleChange}
-              />
+            {/* Input Empresa */}
+            <input
+              type="text"
+              placeholder="Empresa"
+              name="empresa"
+              value={this.state.empresa}
+              autoComplete="off"
+              inputMode="text"
+              className="niveau-input"
+              style={{
+                width: '70%',
+                top: '1200px',
+                left: '110px',
+                position: 'absolute',
+                zIndex: 10,
+                textAlign: 'left',
+                paddingLeft: '120px',
+                height: '100px',
+                backgroundImage: "url('/EmpresaInput.png')",
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                border: 'none',
+                fontSize: '45px',
+                color: 'white',
+              }}
+              onChange={this.handleChange}
+            />
 
-              {/* Botón */}
-              <button
-                style={{
-                  width: '60%',
-                  top: '1400px',
-                  left: '120px',
-                  position: 'absolute',
-                  zIndex: 10,
-                  background: 'transparent',
-                  border: 'none',
-                }}
-                onClick={this.handleRegistro}
-              >
-                <img src="/Continuar.png" alt="Registrarme" className="h-full w-auto" />
-              </button>
-
-            </div>
+            {/* Botón Continuar */}
+            <button
+              style={{
+                width: '60%',
+                top: '1400px',
+                left: '120px',
+                position: 'absolute',
+                zIndex: 10,
+                background: 'transparent',
+                border: 'none',
+              }}
+              onClick={this.handleRegistro}
+            >
+              <img src="/Continuar.png" alt="Registrarme" className="h-full w-auto" />
+            </button>
           </div>
         </div>
       );
     }
+
+
 
     if (this.state.pantalla === "juego") {
       return (
