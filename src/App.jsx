@@ -221,7 +221,7 @@ class App extends Component {
             position: "relative",
             overflowY: "auto",
             WebkitOverflowScrolling: "touch",
-            width: "80vw",
+            width: "100vw",
             height: "100vh",
             backgroundImage: "url('/Registro.png')",
             backgroundSize: "cover",
