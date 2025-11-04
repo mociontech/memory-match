@@ -23,7 +23,7 @@ class App extends Component {
     super(props);
     this.state = {
       ...getEstadoInicial(),
-      pantalla: "juego", //////////////////
+      pantalla: "login", //////////////////
       nombre: "",
       correo: "",
       empresa: "",
