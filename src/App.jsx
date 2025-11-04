@@ -23,7 +23,7 @@ class App extends Component {
     super(props);
     this.state = {
       ...getEstadoInicial(),
-      pantalla: "login", //////////////////
+      pantalla: "juego", //////////////////
       nombre: "",
       correo: "",
       empresa: "",
@@ -221,7 +221,7 @@ class App extends Component {
             position: "fixed",
             overflow: "hidden",
             WebkitOverflowScrolling: "touch",
-            width: "90vw",
+            width: "100vw",
             height: "100vh",
             backgroundImage: "url('/Registro.png')",
             backgroundSize: "cover",
@@ -235,8 +235,8 @@ class App extends Component {
               onClick={this.volverAInicio}
               style={{
                 position: 'absolute',
-                top: '5px',
-                left: '280px',
+                top: '-20px',
+                left: '690px',
                 background: 'transparent',
                 border: 'none',
                 padding: 0,
@@ -248,7 +248,7 @@ class App extends Component {
               <img
                 src="/BtnInicio.png"
                 alt="Inicio"
-                style={{ width: '80px', height: '80px', display: 'block' }}
+                style={{ width: '150px', height: '150px', display: 'block' }}
               />
             </button>
 
@@ -262,20 +262,20 @@ class App extends Component {
               inputMode="text"
               className="niveau-input"
               style={{
-                width: '225px',
-                height: '20px',
-                top: '310px',
-                left: '50px',
+                width: '500px',
+                height: '60px',
+                top: '470px',
+                left: '140px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '40px',
+                paddingLeft: '80px',
                 backgroundImage: "url('/NombreInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '20px',
+                fontSize: '40px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -291,20 +291,20 @@ class App extends Component {
               inputMode="email"
               className="niveau-input"
               style={{
-                width: '225px',
-                height: '20px',
-                top: '370px',
-                left: '50px',
+                width: '500px',
+                height: '60px',
+                top: '570px',
+                left: '140px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '40px',
+                paddingLeft: '80px',
                 backgroundImage: "url('/CorreoInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '20px',
+                fontSize: '40px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -320,20 +320,20 @@ class App extends Component {
               inputMode="text"
               className="niveau-input"
               style={{
-                width: '225px',
-                height: '20px',
-                top: '430px',
-                left: '50px',
+                width: '500px',
+                height: '60px',
+                top: '670px',
+                left: '140px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '40px',
+                paddingLeft: '80px',
                 backgroundImage: "url('/EmpresaInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '20px',
+                fontSize: '40px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -342,9 +342,9 @@ class App extends Component {
             {/* Botón Continuar */}
             <button
               style={{
-                width: '280px',
-                top: '520px',
-                left: '48px',
+                width: '580px',
+                top: '820px',
+                left: '140px',
                 position: 'absolute',
                 zIndex: 10,
                 background: 'transparent',
@@ -358,7 +358,7 @@ class App extends Component {
                 style={{
                   width: '100%',
                   height: 'auto',
-                  maxWidth: '400px'
+                  maxWidth: '1000px'
                 }}
               />
             </button>
@@ -383,25 +383,25 @@ class App extends Component {
           }}
         >
           <button
-            onClick={this.volverAInicio}
-            style={{
-              position: 'absolute',
-              top: '5px',
-              left: '280px',
-              background: 'transparent',
-              border: 'none',
-              padding: 0,
-              lineHeight: 0,
-              cursor: 'pointer',
-              zIndex: 1000,
-            }}
-          >
-            <img
-              src="/BtnInicio.png"
-              alt="Inicio"
-              style={{ width: '80px', height: '80px', display: 'block' }}
-            />
-          </button>
+              onClick={this.volverAInicio}
+              style={{
+                position: 'absolute',
+                top: '-20px',
+                left: '690px',
+                background: 'transparent',
+                border: 'none',
+                padding: 0,
+                lineHeight: 0,
+                cursor: 'pointer',
+                zIndex: 1000,
+              }}
+            >
+              <img
+                src="/BtnInicio.png"
+                alt="Inicio"
+                style={{ width: '150px', height: '150px', display: 'block' }}
+              />
+            </button>
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
             rel="stylesheet"
