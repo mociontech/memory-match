@@ -23,7 +23,7 @@ class App extends Component {
     super(props);
     this.state = {
       ...getEstadoInicial(),
-      pantalla: "login", //////////////////
+      pantalla: "juego", //////////////////
       nombre: "",
       correo: "",
       empresa: "",
@@ -218,10 +218,10 @@ class App extends Component {
         <div
           className="login-screen flex flex-col justify-center items-center"
           style={{
-            position: "relative",
-            overflowY: "auto",
+            position: "fixed",
+            overflow: "hidden",
             WebkitOverflowScrolling: "touch",
-            width: "100vw",
+            width: "90vw",
             height: "100vh",
             backgroundImage: "url('/Registro.png')",
             backgroundSize: "cover",
@@ -236,7 +236,7 @@ class App extends Component {
               style={{
                 position: 'absolute',
                 top: '5px',
-                left: '130px',
+                left: '280px',
                 background: 'transparent',
                 border: 'none',
                 padding: 0,
@@ -248,7 +248,7 @@ class App extends Component {
               <img
                 src="/BtnInicio.png"
                 alt="Inicio"
-                style={{ width: '30px', height: '30px', display: 'block' }}
+                style={{ width: '80px', height: '80px', display: 'block' }}
               />
             </button>
 
@@ -262,21 +262,20 @@ class App extends Component {
               inputMode="text"
               className="niveau-input"
               style={{
-                width: '100px',
-                height: '30px',
-                top: '110px',
-                left: '20px',
+                width: '225px',
+                height: '20px',
+                top: '310px',
+                left: '50px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '20px',
-                height: '5px',
+                paddingLeft: '40px',
                 backgroundImage: "url('/NombreInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '10px',
+                fontSize: '20px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -292,21 +291,20 @@ class App extends Component {
               inputMode="email"
               className="niveau-input"
               style={{
-                width: '100px',
-                height: '30px',
-                top: '140px',
-                left: '20px',
+                width: '225px',
+                height: '20px',
+                top: '370px',
+                left: '50px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '20px',
-                height: '5px',
+                paddingLeft: '40px',
                 backgroundImage: "url('/CorreoInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '10px',
+                fontSize: '20px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -322,21 +320,20 @@ class App extends Component {
               inputMode="text"
               className="niveau-input"
               style={{
-                width: '100px',
-                height: '30px',
-                top: '170px',
-                left: '20px',
+                width: '225px',
+                height: '20px',
+                top: '430px',
+                left: '50px',
                 position: 'absolute',
                 zIndex: 10,
                 textAlign: 'left',
-                paddingLeft: '20px',
-                height: '5px',
+                paddingLeft: '40px',
                 backgroundImage: "url('/EmpresaInput.png')",
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left center',
                 border: 'none',
-                fontSize: '10px',
+                fontSize: '20px',
                 color: 'white',
               }}
               onChange={this.handleChange}
@@ -345,9 +342,9 @@ class App extends Component {
             {/* Botón Continuar */}
             <button
               style={{
-                width: '140px',
-                top: '200px',
-                left: '15px',
+                width: '280px',
+                top: '520px',
+                left: '48px',
                 position: 'absolute',
                 zIndex: 10,
                 background: 'transparent',
@@ -390,7 +387,7 @@ class App extends Component {
             style={{
               position: 'absolute',
               top: '5px',
-              left: '130px',
+              left: '280px',
               background: 'transparent',
               border: 'none',
               padding: 0,
@@ -402,7 +399,7 @@ class App extends Component {
             <img
               src="/BtnInicio.png"
               alt="Inicio"
-              style={{ width: '30px', height: '30px', display: 'block' }}
+              style={{ width: '80px', height: '80px', display: 'block' }}
             />
           </button>
           <link

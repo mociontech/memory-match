@@ -56,13 +56,13 @@ html, body, #root {
   padding-left: 30px;
   height: 20px;
   width: 100%;
-  max-width: 200px;
+  max-width: 800px;
   margin: 10px auto;
 }
 
 .niveau-intentos {
   font-family: 'Niveau Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 34px;
   font-weight: 600;
   color: white;
   text-shadow: 
@@ -73,9 +73,9 @@ html, body, #root {
   border: none;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute; /* posicionar respecto al header */
-  left: 40px; /* desplazar a la izquierda dentro del header */
-  top: 0;
+  position: absolute;
+  left: 80px;
+  top: -40px;
   background-position: center;
   height: 50px;
   transform: scaleY(1.5);
@@ -135,7 +135,7 @@ html, body, #root {
 
 .tablero {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
